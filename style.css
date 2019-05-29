@@ -40,7 +40,7 @@ header#main-header h1{
     align-items: center;
 }
 
-/* Define box vars */
+/* Define box vars (only apply in .box)*/
 .box {
     --box-bg-color: #ddd;
     --box-main-color: #06c;
@@ -62,6 +62,7 @@ header#main-header h1{
 }
 
 .box h1 {
+    /* The .box is not redundant here, because the --box-main-color only effect .box anyways */
     color: var(--box-main-color);
 }
 
@@ -69,5 +70,6 @@ header#main-header h1{
     /* --box-main-color: #555;
     color: var(--box-main-color); */
 
+    /* Defined dropdown color, if --box-p-color is not existing */
     color: var(--box-p-color, #555);
 }
